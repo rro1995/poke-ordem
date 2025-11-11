@@ -1,0 +1,262 @@
+:root {
+    --container-width: 75rem;
+    --container-half: 37.5rem;
+    --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
+    --font-sz-mercury: 0.7em;
+    --font-sz-mars: 0.75em;
+    --font-sz-venus: 0.875em;
+    --font-sz-earth: 1em;
+    --font-sz-neptune: 1.25em;
+    --font-sz-uranus: 1.5em;
+    --font-sz-saturn: 2.25em;
+    --font-sz-jupiter: 3em;
+    --elev-stratus: 0 0.15em 0.15em -0.1em rgba(0, 0, 0, 0.5);
+    --elev-cumulus: 0 0.20em 0.25em rgba(0, 0, 0, 0.15);
+    --elev-cirrus: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+    --elev-stratus-filter: drop-shadow(0 0.1em 0.1em oklch(0% 0 0 / 0.25));
+    --skew-angle: -25deg;
+    --skew-undo: 25deg;
+    --skin-bg: hsl(0, 0%, 20%);
+    --skin-bg-text: hsl(0, 0%, 100%);
+    --skin-bg-dark: hsl(251, 13%, 17%);
+    --skin-bg-softtext: hsla(0, 0%, 100%, 0.667);
+    --skin-bg-light: hsl(0, 0%, 30%);
+    --skin-shade: hsla(0, 0%, 0%, 0.667);
+    --skin-content: hsl(0, 0%, 100%);
+    --skin-content-text: hsl(0, 0%, 20%);
+    --skin-input-bg: hsl(0, 0%, 90%);
+    --skin-focus: hsl(205 90% 50%);
+    --skin-footer: hsl(0, 0%, 0%);
+    --skin-footer-text: hsl(0, 0%, 100%);
+    --skin-danger-bg: hsl(355, 66%, 45%);
+    --skin-danger-text: hsl(355, 66%, 45%);
+    --skin-danger-light: hsl(355, 85%, 98%);
+    --skin-success-bg: hsl(77 50% 36%);
+    --skin-success-text: hsl(85 58% 30%);
+    --skin-normal-bg: hsl(60, 26%, 46%);
+    --skin-fighting-bg: hsl(3, 66%, 45%);
+    --skin-flying-bg: hsl(255, 76%, 70%);
+    --skin-poison-bg: hsl(300, 43%, 44%);
+    --skin-ground-bg: hsl(44, 58%, 43%);
+    --skin-rock-bg: hsl(49, 58%, 41%);
+    --skin-bug-bg: hsl(66, 72%, 35%);
+    --skin-ghost-bg: hsl(263, 27%, 47%);
+    --skin-steel-bg: hsl(240, 15%, 61%);
+    --skin-fire-bg: hsl(25, 84%, 50%);
+    --skin-water-bg: hsl(222, 82%, 65%);
+    --skin-grass-bg: hsl(100, 50%, 41%);
+    --skin-electric-bg: hsl(48, 100%, 35%);
+    --skin-psychic-bg: hsl(342, 70%, 60%);
+    --skin-ice-bg: hsl(180, 50%, 42%);
+    --skin-dragon-bg: hsl(258, 85%, 60%);
+    --skin-dark-bg: hsl(24, 22%, 36%);
+    --skin-fairy-bg: hsl(347, 50%, 63%);
+    --skin-typeless-bg: hsl(0, 0%, 40%);
+    --skin-varies-bg: hsl(0, 0%, 40%);
+    --skin-stellar-bg: conic-gradient( var(--skin-electric-bg) 20deg, var(--skin-fire-bg) 20deg 40deg, var(--skin-fighting-bg) 40deg 60deg, var(--skin-fairy-bg) 60deg 80deg, var(--skin-psychic-bg) 80deg 100deg, var(--skin-poison-bg) 100deg 120deg, var(--skin-ghost-bg) 120deg 140deg, var(--skin-steel-bg) 140deg 160deg, var(--skin-normal-bg) 160deg 180deg, var(--skin-dark-bg) 180deg 200deg, var(--skin-dragon-bg) 200deg 220deg, var(--skin-flying-bg) 220deg 240deg, var(--skin-ice-bg) 240deg 260deg, var(--skin-water-bg) 260deg 280deg, var(--skin-grass-bg) 280deg 300deg, var(--skin-bug-bg) 300deg 320deg, var(--skin-rock-bg) 320deg 340deg, var(--skin-ground-bg) 340deg 360deg);
+    --skin-male-bg: hsl(227, 86%, 48%);
+    --skin-female-bg: hsl(354, 99%, 41%);
+    --skin-agender-bg: hsl(0, 0%, 33%);
+    --skin-none-bg: hsl(0, 0%, 33%);
+    --skin-other-bg: hsl(0, 0%, 33%);
+    --skin-gender-text: hsl(0, 0%, 100%);
+    /* Dark variants needed, filter brightness does not work on svg elements in Safari */
+    --skin-bond-disloyal-bg: oklch(0.7076 0.1847 28.38);
+    --skin-bond-disloyal-bg-dark: oklch(0.4421 0.1092 28.2);
+    --skin-bond-indifferent-bg: oklch(0.8019 0.1677 72.5);
+    --skin-bond-indifferent-bg-dark: oklch(0.5 0.1157 74);
+    --skin-bond-upset-bg: oklch(0.9501 0.1771 105.86);
+    --skin-bond-upset-bg-dark: oklch(0.5599 0.1218 105.4);
+    --skin-bond-neutral-bg: oklch(0.874 0.0402 315.57);
+    --skin-bond-neutral-bg-dark: oklch(0.5021 0.0251 312);
+    --skin-bond-content-bg: oklch(0.8903 0.2255 143.17);
+    --skin-bond-content-bg-dark: oklch(0.5067 0.1427 143.5);
+    --skin-bond-pleased-bg: oklch(0.9051 0.1467 182.58);
+    --skin-bond-pleased-bg-dark: oklch(0.507 0.0921 182.5);
+    --skin-bond-loyal-bg: oklch(0.7609 0.2122 334.9);
+    --skin-bond-loyal-bg-dark: oklch(0.4613 0.1217 335);
+    --skin-pokeball-bg: hsl(355 66% 45%);
+    --skin-medicine-bg: hsl(249, 50%, 57%);
+    --skin-berry-bg: hsl(205 50% 35%);
+    --skin-held-item-bg: hsl(176, 60%, 32%);
+    --skin-evolution-bg: hsl(77, 50%, 36%);
+    --skin-trainer-gear-bg: hsl(28 50% 32%);
+    --skin-bar-bg: hsl(330, 1%, 38%);
+    --skin-bar-healthy: hsl(119, 100%, 52%);
+    --skin-bar-secondary: hsl(197, 91%, 64%);
+    --skin-bar-tertiary: hsl(330, 1%, 65%);
+    --skin-bar-warning: hsl(45, 83%, 49%);
+    --skin-bar-danger: hsl(355, 72%, 53%);
+    --skin-contest-cool: hsla(25, 86%, 72%, 0.5);
+    --skin-contest-beauty: hsla(222, 81%, 79%, 0.5);
+    --skin-contest-cute: hsla(342, 91%, 78%, 0.5);
+    --skin-contest-clever: hsla(100, 52%, 71%, 0.5);
+    --skin-contest-tough: hsla(48, 93%, 73%, 0.5);
+    --skin-status-poisoned: oklch(70.5% 0.223 314);
+    --skin-status-badlypoisoned: linear-gradient(to bottom, oklch(60% 0.277 293), oklch(68% 0.251 305));
+    --skin-status-frozen: oklch(89% 0.166 177);
+    --skin-status-burned: oklch(74% 0.177 51);
+    --skin-status-paralysis: oklch(87% 0.179 92);
+    --skin-status-asleep: oklch(80% 0.105 247);
+    --skin-status-text: oklch(0% 0 0);
+    --red-hsl: 355 72% 53%;
+    --red-main: hsl(355 72% 53%);
+    --red-dark: hsl(355 66% 45%);
+    --red-text: hsl(355 66% 45%);
+    --red-light: hsl(355 90% 67%);
+    interpolate-size: allow-keywords;
+}
+
+.theme-blue {
+    --theme-main: hsl(180, 57%, 48%);
+    --theme-dark: hsl(178, 55%, 43%);
+    --theme-text: hsl(176, 60%, 32%);
+    --theme-light: hsl(180, 57%, 58%);
+}
+
+.theme-red {
+    --theme-main: var(--red-main);
+    --theme-dark: var(--red-dark);
+    --theme-text: var(--red-text);
+    --theme-light: var(--red-light);
+}
+
+.theme-purple {
+    --theme-main: hsl(248, 100%, 83%);
+    --theme-dark: hsl(249, 100%, 79%);
+    --theme-text: hsl(249, 50%, 57%);
+    --theme-light: hsl(248, 100%, 83%);
+}
+
+.theme-green {
+    --theme-main: hsl(78, 82%, 56%);
+    --theme-dark: hsl(77, 100%, 42%);
+    --theme-text: hsl(77, 50%, 36%);
+    --theme-light: hsl(78, 82%, 56%);
+}
+
+.theme-navy {
+    --theme-main: hsl(208 100% 63%);
+    --theme-dark: hsl(205 90% 50%);
+    --theme-text: hsl(205 50% 35%);
+    --theme-light: hsl(208 100% 63%);
+}
+
+.theme-yellow {
+    --theme-main: hsl(43 89% 54%);
+    --theme-dark: hsl(42 100% 45%);
+    --theme-text: hsl(42 100% 29%);
+    --theme-light: hsl(43 89% 54%);
+}
+
+.theme-orange {
+    --theme-main: hsl(28 87% 54%);
+    --theme-dark: hsl(40 100% 71%);
+    --theme-text: hsl(28 50% 32%);
+    --theme-light: hsl(40 100% 71%);
+}
+
+.theme-pink {
+    --theme-main: hsl(332, 100%, 69%);
+    --theme-dark: hsl(334, 91%, 63%);
+    --theme-text: hsl(334, 48%, 38%);
+    --theme-light: hsl(332, 100%, 69%);
+}
+
+body {
+    font-family: var(--font-reg);
+    font-size: var(--font-sz-base);
+    background-image: radial-gradient(circle at 5vw 70vh, hsla(321, 86%, 91%, 0.5), hsla(321, 86%, 91%, 0) 67%), radial-gradient(circle at 50vw 5vh, hsla(120, 50%, 75%, 0.25), hsla(120, 50%, 75%, 0) 67%), radial-gradient(circle at 80vw 95vh, hsla(45, 80%, 65%, 0.25), hsla(45, 50%, 65%, 0) 67%);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+a {
+    color: var(--theme-text);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding-inline-start: clamp(0.75em, 3vw, 2em);
+}
+
+input,
+textarea,
+select {
+    border: none;
+    background-color: var(--skin-input-bg);
+    padding: 0.5em 0.75em;
+}
+
+input:focus,
+textarea:focus {
+    background-color: var(--skin-content);
+    outline: 0.125em solid var(--skin-focus);
+}
+
+input:disabled+label {
+    opacity: 0.5;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    box-shadow: var(--elev-stratus);
+    border: 0.125em solid var(--skin-bg);
+    border-radius: 0.5em;
+}
+
+figure figcaption {
+    padding-block: 0.25em;
+    display: block;
+    text-align: center;
+    font-size: var(--font-sz-venus);
+    opacity: 0.9;
+}
+
+hr {
+    width: 33%;
+    border: none;
+    border-bottom: 0.0625em solid var(--skin-bg);
+    opacity: 0.5;
+}
+
+.nolist {
+    list-style: none;
+    padding: 0;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+dfn {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
